@@ -226,18 +226,17 @@ const MobileNavItem = ({ label, children, href }) => {
 }
 function ModeToggle() {
     const { colorMode, toggleColorMode } = useColorMode()
+    const ModeToggle = ()=>{
+        debugger
+        toggleColorMode()
+    }
     return (
-        <Button  size={'sm'}   px={'1'}onClick={toggleColorMode} variant={'ghost'} _hover={{background: 'none'}}>
+        <Button  size={'sm'}   px={'1'} onClick={ModeToggle} variant={'ghost'} _hover={{background: 'none'}}>
            {colorMode === 'light' ? <LuMoonStar/> : <MdOutlineWbSunny />}
         </Button>
     )
   }
-// Home
-// About Me
-// Services
-// Portfolio
-// Contacts
-// Blog
+
 
 const NAV_ITEMS = [
   {
